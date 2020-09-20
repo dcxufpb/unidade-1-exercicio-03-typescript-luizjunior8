@@ -65,21 +65,27 @@ test('Inscrição estadual vazia', () => {
 test('Exercício 2 - customizado', () => {
 
   // Defina seus próprios valores para as variáveis a seguir
-  cupom.dados.nome_loja = "";
-  cupom.dados.logradouro = "";
-  cupom.dados.numero = 0;
-  cupom.dados.complemento = "";
-  cupom.dados.bairro = "";
-  cupom.dados.municipio = "";
-  cupom.dados.estado = "";
-  cupom.dados.cep = "";
-  cupom.dados.telefone = "";
-  cupom.dados.observacao = "";
-  cupom.dados.cnpj = "";
-  cupom.dados.inscricao_estadual = "";
+  cupom.dados.nome_loja = "Jr Tech";
+  cupom.dados.logradouro = "Geraldo Correia de Melo";
+  cupom.dados.numero = 100;
+  cupom.dados.complemento = "Casa";
+  cupom.dados.bairro = "Centro";
+  cupom.dados.municipio = "Araçagi";
+  cupom.dados.estado = "PB";
+  cupom.dados.cep = "58270-000";
+  cupom.dados.telefone = "(83) 98111-2696";
+  cupom.dados.observacao = "Matriz";
+  cupom.dados.cnpj = "89.415.255/0001-29";
+  cupom.dados.inscricao_estadual = "309.808.863.000";
 
   //E atualize o texto esperado abaixo
   expect(cupom.imprime_dados_loja()).toBe(
-    `
+    `Jr Tech
+Geraldo Correia de Melo, 100 Casa
+Centro - Araçagi - PB
+CEP:58270-000 Tel (83) 98111-2696
+Matriz
+CNPJ: 89.415.255/0001-29
+IE: 309.808.863.000
 `);
 });
